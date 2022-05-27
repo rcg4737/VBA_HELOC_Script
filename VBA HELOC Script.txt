@@ -1,0 +1,291 @@
+Public Sub CreateHELOCUpload()
+Dim rgSource As Variant, rgDestination As Variant
+
+
+MainFile = ActiveWorkbook.Name
+
+Application.ScreenUpdating = False
+Application.DisplayAlerts = False
+
+
+ReportMonth = Range("ReportMonth").Value
+ReportYear = Range("ReportYear").Value
+Company = Range("Company").Value
+FileDate = Range("FileDate").Value
+
+    
+Sheets("Data").Select
+Rows("3:500000").Select
+Selection.Delete Shift:=xlUp
+
+Range("A2:HM2").Select
+Selection.Delete Shift:=xlUp
+
+Range("IT2:IW10000").Select
+Selection.Delete Shift:=xlUp
+
+Dim FileToOpen As Variant
+Dim OpenBook As Workbook
+FileToOpen = Application.GetOpenFilename
+    If FileToOpen <> False Then
+        Set OpenBook = Application.Workbooks.Open(FileToOpen)
+    End If
+
+
+
+    
+Set rgSource = OpenBook.Sheets(1)
+Set rgDestination = ThisWorkbook.Worksheets("Data")
+
+Dim arr As Variant
+
+arr = rgSource.Range("B2:B10000").Value
+rgDestination.Range("A2:A10000").Value = arr
+
+arr = rgSource.Range("G2:G10000").Value
+rgDestination.Range("B2:B10000").Value = arr
+
+arr = rgSource.Range("AR2:AR10000").Value
+rgDestination.Range("E2:E10000").Value = arr
+
+arr = rgSource.Range("AT2:AT10000").Value
+rgDestination.Range("F2:F10000").Value = arr
+
+arr = rgSource.Range("AS2:AS10000").Value
+rgDestination.Range("G2:G10000").Value = arr
+
+arr = rgSource.Range("AQ2:AQ10000")
+rgDestination.Range("H2:H10000").Value = arr
+
+arr = rgSource.Range("BK2:BK10000")
+rgDestination.Range("I2:I10000").Value = arr
+
+arr = rgSource.Range("AF2:AF10000")
+rgDestination.Range("N2:N10000").Value = arr
+
+arr = rgSource.Range("C2:C10000")
+rgDestination.Range("O2:O10000").Value = arr
+
+arr = rgSource.Range("BK2:BK10000")
+rgDestination.Range("S2:S10000").Value = arr
+
+arr = rgSource.Range("AU2:AU10000")
+rgDestination.Range("X2:X10000").Value = arr
+
+arr = rgSource.Range("CQ2:CQ10000")
+rgDestination.Range("Y2:Y10000").Value = arr
+
+arr = rgSource.Range("BM2:BM10000")
+rgDestination.Range("AA2:AA10000").Value = arr
+
+arr = rgSource.Range("BJ2:BJ10000")
+rgDestination.Range("AB2:AB10000").Value = arr
+
+arr = rgSource.Range("DR2:DR10000")
+rgDestination.Range("AC2:AC10000").Value = arr
+
+arr = rgSource.Range("BH2:BH10000")
+rgDestination.Range("AD2:AD10000").Value = arr
+
+arr = rgSource.Range("AO2:AO10000")
+rgDestination.Range("AL2:AL10000").Value = arr
+
+arr = rgSource.Range("AZ2:AZ10000")
+rgDestination.Range("AO2:AO10000").Value = arr
+
+arr = rgSource.Range("AO2:AO10000")
+rgDestination.Range("AQ2:AQ10000").Value = arr
+
+arr = rgSource.Range("AF2:AF10000")
+rgDestination.Range("AR2:AR10000").Value = arr
+
+arr = rgSource.Range("BV2:BV10000")
+rgDestination.Range("BD2:BD10000").Value = arr
+
+arr = rgSource.Range("AN2:AN10000")
+rgDestination.Range("BG2:BG10000").Value = arr
+
+arr = rgSource.Range("BT2:BT10000")
+rgDestination.Range("BL2:BL10000").Value = arr
+
+arr = rgSource.Range("BL2:BL10000")
+rgDestination.Range("BM2:BM10000").Value = arr
+
+arr = rgSource.Range("BV2:BV10000")
+rgDestination.Range("BQ2:BQ10000").Value = arr
+
+arr = rgSource.Range("D2:D10000")
+rgDestination.Range("BZ2:BZ10000").Value = arr
+
+arr = rgSource.Range("BY2:BY10000")
+rgDestination.Range("CJ2:CJ10000").Value = arr
+
+arr = rgSource.Range("P2:P10000")
+rgDestination.Range("CL2:CL10000").Value = arr
+
+arr = rgSource.Range("M2:M10000")
+rgDestination.Range("CM2:CM10000").Value = arr
+
+arr = rgSource.Range("R2:R10000")
+rgDestination.Range("CO2:CO10000").Value = arr
+
+arr = rgSource.Range("CE2:CE10000")
+rgDestination.Range("CP2:CP10000").Value = arr
+
+arr = rgSource.Range("I2:I10000")
+rgDestination.Range("CS2:CS10000").Value = arr
+
+arr = rgSource.Range("J2:J10000")
+rgDestination.Range("CX2:CX10000").Value = arr
+
+arr = rgSource.Range("DH2:DH10000")
+rgDestination.Range("CY2:CY10000").Value = arr
+
+arr = rgSource.Range("CU2:CU10000")
+rgDestination.Range("CZ2:CZ10000").Value = arr
+
+arr = rgSource.Range("DI2:DI10000")
+rgDestination.Range("DA2:DA10000").Value = arr
+
+arr = rgSource.Range("L2:L10000")
+rgDestination.Range("DB2:DB10000").Value = arr
+
+arr = rgSource.Range("CH2:CH10000")
+rgDestination.Range("DD2:DD10000").Value = arr
+
+arr = rgSource.Range("AK2:AK10000")
+rgDestination.Range("DE2:DE10000").Value = arr
+
+arr = rgSource.Range("N2:N10000")
+rgDestination.Range("DK2:DK10000").Value = arr
+
+arr = rgSource.Range("S2:S10000")
+rgDestination.Range("DL2:DL10000").Value = arr
+
+arr = rgSource.Range("CI2:CI10000")
+rgDestination.Range("DM2:DM10000").Value = arr
+
+arr = rgSource.Range("T2:T10000")
+rgDestination.Range("DN2:DN10000").Value = arr
+
+arr = rgSource.Range("AA2:AA10000")
+rgDestination.Range("DO2:DO10000").Value = arr
+
+arr = rgSource.Range("AC2:AC10000")
+rgDestination.Range("DR2:DR10000").Value = arr
+
+arr = rgSource.Range("Y2:Y10000")
+rgDestination.Range("DV2:DV10000").Value = arr
+
+arr = rgSource.Range("U2:U10000")
+rgDestination.Range("EA2:EA10000").Value = arr
+
+arr = rgSource.Range("W2:W10000")
+rgDestination.Range("EE2:EE10000").Value = arr
+
+arr = rgSource.Range("AD2:AD10000")
+rgDestination.Range("EO2:EO10000").Value = arr
+
+arr = rgSource.Range("AE2:AE10000")
+rgDestination.Range("EQ2:EQ10000").Value = arr
+
+arr = rgSource.Range("DU2:DU10000")
+rgDestination.Range("ES2:ES10000").Value = arr
+
+arr = rgSource.Range("DX2:DX10000")
+rgDestination.Range("ET2:ET10000").Value = arr
+
+
+arr = rgSource.Range("EY2:EY10000").Value
+rgDestination.Range("IT2:IT10000").Value = arr
+
+arr = rgSource.Range("FU2:FU10000").Value
+rgDestination.Range("IU2:IU10000").Value = arr
+
+arr = rgSource.Range("FW2:FW10000").Value
+rgDestination.Range("IV2:IV10000").Value = arr
+
+arr = rgSource.Range("FX2:FX10000").Value
+rgDestination.Range("IW2:IW10000").Value = arr
+
+
+OpenBook.Close False
+
+LastRow = Cells(Rows.Count, 1).End(xlUp).Row
+
+
+Dim i As Long
+
+For i = 2 To LastRow
+    If rgDestination.Cells(i, 2).Value = "IN_PROGRESS" Or rgDestination.Cells(i, 2).Value = "GEN_NOTE_SIGNING" Or rgDestination.Cells(i, 2).Value = "GEN_DEED_SIGNING" Or rgDestination.Cells(i, 2).Value = "NOTE_SIGNING" Or rgDestination.Cells(i, 2).Value = "DEED_SIGNING" Or rgDestination.Cells(i, 2).Value = "CO_DEED_REQ" Then rgDestination.Cells(i, 2).Value = "Active Loan"
+    If rgDestination.Cells(i, 2).Value = "DECLINED" Then rgDestination.Cells(i, 2).Value = "Application denied"
+    If rgDestination.Cells(i, 2).Value = "RECORDING" Or rgDestination.Cells(i, 2).Value = "COMPLETE" Then rgDestination.Cells(i, 2).Value = "Loan Originated"
+    If rgDestination.Cells(i, 2).Value = "CANCELLED" Or rgDestination.Cells(i, 2).Value = "RESCISSION" Then rgDestination.Cells(i, 2).Value = "Application withdrawn"
+    rgDestination.Cells(i, 4).Value = Application.WorksheetFunction.Max(Range("IT" & i & ":IW" & i))
+    If IsNumeric(rgDestination.Cells(i, 9).Value) Then rgDestination.Cells(i, 9).Value = CDec(rgDestination.Cells(i, 9).Value) * 100
+    If IsEmpty(rgDestination.Cells(i, 16).Value) Then rgDestination.Cells(i, 16).Value = "HELOC"
+    If IsNumeric(rgDestination.Cells(i, 19).Value) Then rgDestination.Cells(i, 19).Value = CDec(rgDestination.Cells(i, 19).Value) * 100
+    If rgDestination.Cells(i, 25).Value = "1" Then rgDestination.Cells(i, 25).Value = "First Lien"
+    If rgDestination.Cells(i, 25).Value = "2" Then rgDestination.Cells(i, 25).Value = "Second Lien"
+    If rgDestination.Cells(i, 25).Value = "3" Then rgDestination.Cells(i, 25).Value = "Third Lien"
+    If IsEmpty(rgDestination.Cells(i, 31).Value) Then rgDestination.Cells(i, 31).Value = "HELOC"
+    If rgDestination.Cells(i, 43).Value = "HOME" Then rgDestination.Cells(i, 38).Value = "PrimaryResidence"
+    If rgDestination.Cells(i, 43).Value = "INVESTMENT" Then rgDestination.Cells(i, 38).Value = "Investor"
+    If rgDestination.Cells(i, 43).Value = "SECONDARY" Then rgDestination.Cells(i, 38).Value = "SecondaryHome"
+    If rgDestination.Cells(i, 43).Value = "HOME" Then rgDestination.Cells(i, 43).Value = "PrimaryResidence"
+    If rgDestination.Cells(i, 43).Value = "INVESTMENT" Then rgDestination.Cells(i, 43).Value = "Investor"
+    If rgDestination.Cells(i, 43).Value = "SECONDARY" Then rgDestination.Cells(i, 43).Value = "SecondaryHome"
+    If IsEmpty(rgDestination.Cells(i, 45).Value) Then rgDestination.Cells(i, 45).Value = "HELOC"
+    If IsNumeric(rgDestination.Cells(i, 56).Value) Then rgDestination.Cells(i, 56).Value = CDec(rgDestination.Cells(i, 56).Value) * 100
+    If IsNumeric(rgDestination.Cells(i, 64).Value) Then rgDestination.Cells(i, 64).Value = CDec(rgDestination.Cells(i, 64).Value) * 100
+    If IsNumeric(rgDestination.Cells(i, 69).Value) Then rgDestination.Cells(i, 69).Value = CDec(rgDestination.Cells(i, 69).Value) * 100
+    If IsNumeric(rgDestination.Cells(i, 88).Value) Then rgDestination.Cells(i, 88).Value = CDec(rgDestination.Cells(i, 88).Value) * 100
+    If rgDestination.Cells(i, 103).Value = "MALE, FEMALE" Then rgDestination.Cells(i, 103).Value = "MALE"
+    If InStr(1, rgDestination.Cells(i, 104).Value, True) > 0 Then rgDestination.Cells(i, 104).Value = "Hispanic or Latino"
+    If InStr(1, rgDestination.Cells(i, 104).Value, False) > 0 Then rgDestination.Cells(i, 104).Value = "Not Hispanic or Latino"
+    If IsEmpty(rgDestination.Cells(i, 104).Value) Then rgDestination.Cells(i, 104).Value = "Information not provided"
+    If IsNumeric(rgDestination.Cells(i, 108).Value) Then rgDestination.Cells(i, 108).Value = Round(CDec(rgDestination.Cells(i, 108).Value), 2)
+    If IsNumeric(rgDestination.Cells(i, 109).Value) Then rgDestination.Range("DE" & i).NumberFormat = "[<=9999999]###-####;###-###-####"
+    If IsNumeric(rgDestination.Cells(i, 117).Value) Then rgDestination.Cells(i, 117).Value = Round(CDec(rgDestination.Cells(i, 117).Value), 2)
+    If IsEmpty(rgDestination.Cells(i, 135).Value) = True And IsEmpty(rgDestination.Cells(i, 119).Value) = False Then rgDestination.Range("DO" & i & ":EQ" & i).Clear
+    If rgDestination.Cells(i, 15).Value > 10 Then rgDestination.Cells(i, 15).Value = Left(rgDestination.Cells(i, 15), 10)
+    If IsEmpty(rgDestination.Cells(i, 150).Value) = False And IsEmpty(rgDestination.Cells(i, 149).Value) = True Then rgDestination.Cells(i, 150).Value = ""
+    If rgDestination.Cells(i, 105).Value = "AMERICAN_INDIAN_OR_ALASKA_NATIVE, NATIVE_HAWAIIAN_OR_OTHER_ISLANDER" Then rgDestination.Cells(i, 105).Value = "AMERICAN_INDIAN_OR_ALASKA_NATIVE"
+Next i
+
+
+Columns("D:D").NumberFormat = "dd/MM/yyyy"
+
+    If Company = "Owning" Then
+    Company = "GRI"
+    ElseIf Company = "SoFi" Then
+    Company = "PR"
+        ElseIf Company = "OP" Then
+        Company = "PR"
+        End If
+
+        Workbooks.Open ("G:\company file path\" & Company & " Files\" & Company & " Encompass Daily Upload.xlsx")
+        Sheets("Data").Select
+        Rows("2:500000").Select
+        Selection.Delete Shift:=xlUp
+        
+        
+        Dim transferArray As Variant
+        
+        transferArray = Workbooks("ENHANCED Create ACES Upload Model.xlsm").Worksheets("Data").Range("A2:HM10000")
+        Workbooks(Company & " Encompass Daily Upload.xlsx").Worksheets("Data").Range("A2:HM10000") = transferArray
+        
+        Workbooks(Company & " Encompass Daily Upload.xlsx").Close SaveChanges:=True
+
+
+
+    Application.ScreenUpdating = False
+    Application.DisplayAlerts = True
+
+    Sheets("Control").Select
+    MsgBox "Upload file is ready."
+
+
+
+
+End Sub
